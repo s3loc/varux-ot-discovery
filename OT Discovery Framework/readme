@@ -1,0 +1,136 @@
+### 📘 **README — VARUX OT Discovery Framework**
+
+---
+
+#### **Project Overview**
+
+**VARUX OT Discovery Framework** is a next-generation industrial (OT) network discovery and topology intelligence system developed by **s3loc (Selman Vural)** under **VARUX Dynamic Research Labs**.
+It is designed to **map**, **monitor**, and **analyze** operational technology environments with **passive**, **read-only**, and **rate-limited** intelligence modules—ensuring complete compliance and zero disruption to live industrial systems.
+
+This framework integrates advanced modules for:
+
+* **Passive network discovery (SPAN/TAP monitoring)**
+* **SNMPv3 authPriv-secured device enumeration (MD5/SHA + AES)**
+* **LLDP/CDP-based topology reconstruction**
+* **Modbus/TCP asset identification**
+* **Log rotation and secure audit trail with cryptographic signatures**
+* **SIEM & ELK integration for centralized telemetry**
+* **Adaptive rate-limiting and exponential retry/backoff control**
+* **Encrypted credential vault & secure configuration management**
+
+---
+
+#### **Key Features**
+
+| Category               | Description                                                                                                      |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Discovery Engine**   | Passive and semi-active asset identification with protocol-aware fingerprinting (SNMP, Modbus, LLDP, ICMP, ARP). |
+| **Topology Mapping**   | Graph-based LLDP parser generating network relationship graphs using Graphviz.                                   |
+| **Logging & Security** | Masked, rotating log system with archive compression, PII masking, and journal integration.                      |
+| **Audit Trail**        | Every discovery session is digitally signed (RSA 2048) and timestamp-verified.                                   |
+| **Credential Vault**   | Optional HashiCorp Vault and environment-variable-based credential isolation.                                    |
+| **SIEM Bridge**        | Supports JSON, CEF, LEEF, and Splunk HTTP Collector formats.                                                     |
+| **Resource Safety**    | Enforced CPU/RAM/file-descriptor ceilings to protect embedded systems.                                           |
+| **Compliance Ready**   | Structured for IEC 62443, NIST 800-82, and ISO 27019 alignment.                                                  |
+
+---
+
+#### **Installation**
+
+```bash
+git clone https://github.com/varux/ot-discovery-framework.git
+cd ot-discovery-framework
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+*Run only within authorized, isolated lab or scoped enterprise networks.*
+
+---
+
+#### **Usage**
+
+```bash
+sudo python3 VARUX_OT_Discovery_Framework.py --range 192.168.1.0/24 --rps 1.0 --snmpv3
+```
+
+* Default configuration: `config/elite_config.yaml`
+* Output data: `elite_discovery_outputs/` (JSON, SVG, Reports)
+* Logs: `/var/log/industrial_discovery/`
+* Dashboard (optional): [http://localhost:8050](http://localhost:8050)
+
+---
+
+#### **Configuration**
+
+The framework supports **YAML** or **JSON** configuration files with environment-variable substitution:
+
+```yaml
+snmpv3_users:
+  - username: discovery
+    auth_protocol: SHA
+    auth_key: ${SNMPV3_AUTH_KEY}
+    priv_protocol: AES
+    priv_key: ${SNMPV3_PRIV_KEY}
+```
+
+Sensitive values are never stored in plain text. Logs automatically mask keys, credentials, and tokens.
+
+---
+
+#### **Legal & Ethical Notice**
+
+> ⚠️ **Strict Legal Compliance Required**
+
+This software is created **exclusively for authorized security auditing, asset discovery, and compliance verification** in **networks where explicit written consent** has been granted.
+Any use, deployment, or distribution **outside of approved scopes** constitutes **unauthorized activity** and may violate:
+
+* **Turkish Penal Code 5651 & 5237**,
+* **EU Cybercrime Directive 2013/40/EU**,
+* **U.S. Computer Fraud and Abuse Act (18 U.S.C. § 1030)**,
+* and other international cybersecurity laws.
+
+**VARUX Dynamic Labs** and its contributors disclaim any liability for misuse.
+Use of this framework implies acceptance of all compliance and ethics conditions.
+
+---
+
+#### **Security & Privacy**
+
+* All data collected during scans is **read-only** and **non-destructive**.
+* Sensitive outputs (credentials, hashes, tokens) are automatically masked in logs.
+* Audit logs are **digitally signed** and can be **verified** for chain-of-custody assurance.
+* Configurable retention and encryption policies prevent data leakage.
+
+---
+
+#### **Author**
+
+**Selman Vural (s3loc)**
+Lead Developer — VARUX Dynamic Research Labs
+
+🔗 [https://varuxcyber.com](https://varuxcyber.com)
+
+
+---
+
+#### **License**
+
+```
+VARUX OT Discovery Framework © 2025 Selman Vural / VARUX Dynamic Labs.
+All rights reserved.
+
+Redistribution or modification is permitted only under written authorization.
+Unauthorized commercial use, rebranding, or derivative security tools are prohibited.
+
+This software is provided “AS IS”, without warranty of any kind.
+```
+
+---
+
+#### **Final Note**
+
+Industrial networks are fragile ecosystems.
+This framework exists to **protect** them—never to exploit.
+If you are unsure about authorization, you already do **not** have it.
