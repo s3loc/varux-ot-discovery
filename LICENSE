@@ -19,3 +19,38 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+#VARUX  S3LOC
+
+Copyright (c) 2025
+Copyright Holder: s3loc (Selman Vural) — VARUX Dynamic Research Labs
+
+1. Purpose
+
+This License governs use, reproduction, modification and distribution of the software and associated documentation (the “Software”) authored by the Copyright Holder. The Software’s purpose is to enable authorized security testing, industrial network discovery and defensive research. This License is intentionally restrictive with respect to unauthorized and malicious uses.
+
+2. Definitions
+
+Authorized Use: Use by a natural person or legal entity which has obtained explicit written authorization from the Copyright Holder or a signed lawful engagement (e.g., SLA/SoW) from the owner of the target environment.
+
+Malicious Use: Any use intended to interfere with, disrupt, exfiltrate data from, degrade, or destroy systems, networks or data without explicit written permission from the system owner.
+
+Distribution: any public or private transfer, sale, publication, hosting (including public Git hosts), or re-licensing of the Software or Derivatives.
+
+Derivative: any work that modifies, extends, incorporates or is derived from the Software.
+
+3. Grant of Rights
+
+Subject to the conditions below, the Copyright Holder grants you a worldwide, non-exclusive, royalty-free license to:
+
+Use the Software for Authorized Use (including internal research, accredited academic research, authorized assessments);
+
+Reproduce and make Derivatives for Authorized Use and internal testing;
+
+Distribute the Software only where such Distribution complies with Section 4 (Conditions) and Section 5 (Prohibited Use).
+
+4. Conditions (must be met for any use or distribution)
+
+Authorization Required: Any use of the Software against third-party systems (i.e., not exclusively on infrastructure you own) requires explicit written authorization from the target system owner and prior written notice to the Copyright Holder if the engagement is commercial or publicly disclosed.
+
+Attribution: All copies and Derivatives must retain a visible copyright notice:
