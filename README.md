@@ -134,3 +134,6 @@ Yazar (s3loc) kötüye kullanımdan doğacak sonuçlardan sorumlu değildir.
 ⠀⠀⠙⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⣴⣿⠋⠀⠀⠀
 ⠀⠀⠀⠈⠙⢿⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣴⣾⣿⠿⠋⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠈⠉⠛⠛⠻⠿⠿⠿⠿⠛⠛⠛⠛⠉⠁⠀⠀⠀
+
+
+
