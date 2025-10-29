@@ -119,9 +119,9 @@ Yazar (s3loc) kötüye kullanımdan doğacak sonuçlardan sorumlu değildir.
 
 -------------------------------
 
-![giphy](https://github.com/user-attachments/assets/4a6ddb23-c64b-4f75-97c4-65e164bbd4fa)
 
 
 
+![giphy](https://github.com/user-attachments/assets/2920b00b-38d6-486f-87db-8576d620b791)
 
 
